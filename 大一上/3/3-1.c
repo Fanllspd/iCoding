@@ -27,8 +27,7 @@ Enter phone number: 1-DCKS-A2D-OLED
 
 int main()
 {
-    char ch, str[28];
-    int i = 0;
+    char ch;
     while ((ch = getchar()) != '\n')
     {
 

@@ -34,13 +34,7 @@ void print(const struct part inv[], int np);
 
 int main()
 {
-    struct part
-    {
-        int number;
-        char name[NAME_LEN + 1];
-        int on_hand;
-    } inventory[MAX_PARTS];
-
+    struct part inventory[MAX_PARTS];
     int number_parts = 0;
     char code;
     for (;;)

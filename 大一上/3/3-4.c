@@ -111,7 +111,6 @@ void RandomWalk(int begin[2], char Map[10][10])
 {
     time_t t;
     srand((unsigned)time(&t));
-    char alphabet[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for (int i = 1; i < 26; i++)
     {
         int toward = rand() % 4;
@@ -127,7 +126,7 @@ void RandomWalk(int begin[2], char Map[10][10])
 
 int main()
 {
-    char walkMap[10][10] = {'.'};
+    char walkMap[10][10] = {{'.'}};
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)

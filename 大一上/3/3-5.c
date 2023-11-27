@@ -43,7 +43,7 @@ int main()
 {
     char str[50];
     int amounts;
-    gets(str);
+    fgets(str, sizeof(str), stdin);
     scanf("%d", &amounts);
     for (int i = 0; i < strlen(str); i++)
     {
