@@ -54,19 +54,20 @@ void pre_order(BiTree root)
         return;
     Stack s;
     init_stack(&s);
-    push(&s, root);
+    BiTree current = root;
+    push(&s, current);
 
     while (!is_empty(&s))
     {
-        BiTree node = (BiTree)malloc(sizeof(BiTree));
-        top(&s, &node);
-        visit_node(node);
-        pop(&s, &node);
+        // BiTree node = (BiTree)malloc(sizeof(BiTree));
+        // top(&s, &node);
+        pop(&s, &current);
+        visit_node(current);
 
-        if (node->right)
-            push(&s, node->right);
-        if (node->left)
-            push(&s, node->left);
+        if (current->right)
+            push(&s, current->right);
+        if (current->left)
+            push(&s, current->left);
     }
 }
 
